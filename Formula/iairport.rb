@@ -20,6 +20,10 @@ class Iairport < Formula
       The first run asks for Location permission. Click Allow so iairport
       can read the SSID and BSSID. The grant is tied to the installed
       binary, so each upgrade asks once more.
+
+      Keep one install. If you built from source with `make install`
+      before, run `sudo make uninstall` in that clone. If no prompt
+      appears, quit any other running copy of iairport and run again.
     EOS
   end
 
