@@ -1,8 +1,8 @@
 class Iairport < Formula
   desc "Wi-Fi roaming and link diagnostics for macOS"
   homepage "https://github.com/samwiseg0/iAirport"
-  url "https://github.com/samwiseg0/iAirport/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "710cec7ee40f0de7ec3168bddde6b8d21663966b6c05149f1b50e475f0cbd7a5"
+  url "https://github.com/samwiseg0/iAirport/archive/refs/tags/v2.1.0.tar.gz"
+  sha256 "392fa0bb2539679a1c94f24e9799784db5edc70a24ca3f96bf50e79b51059353"
   license "MIT"
   head "https://github.com/samwiseg0/iAirport.git", branch: "master"
 
@@ -24,6 +24,11 @@ class Iairport < Formula
       Keep one install. If you built from source with `make install`
       before, run `sudo make uninstall` in that clone. If no prompt
       appears, quit any other running copy of iairport and run again.
+
+      Some managed Macs mark app bundles outside /Applications
+      launch-disabled, and the Location toggle turns itself off again.
+      Homebrew keeps the bundle in the Cellar, so on those Macs build
+      from a clone with `sudo make install APPINSTALLDIR=/Applications`.
     EOS
   end
 
