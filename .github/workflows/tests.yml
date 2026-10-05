@@ -1,0 +1,35 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: macos-26
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@e99025eb970cfa124b8284a35463d87426917478 # 2026.09.28.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tap syntax
+        run: brew test-bot --only-tap-syntax
+
+      - name: Install from source
+        run: brew install --build-from-source --verbose samwiseg0/tap/iairport
+
+      - name: Test
+        run: brew test samwiseg0/tap/iairport
+
+      - name: Audit
+        run: brew audit --strict --online samwiseg0/tap/iairport
