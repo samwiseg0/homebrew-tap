@@ -1,8 +1,8 @@
 class Iairport < Formula
   desc "Wi-Fi roaming and link diagnostics for macOS"
   homepage "https://github.com/samwiseg0/iAirport"
-  url "https://github.com/samwiseg0/iAirport/archive/refs/tags/v2.1.0.tar.gz"
-  sha256 "392fa0bb2539679a1c94f24e9799784db5edc70a24ca3f96bf50e79b51059353"
+  url "https://github.com/samwiseg0/iAirport/archive/refs/tags/v2.1.1.tar.gz"
+  sha256 "d5b61383d028709134c4e56fca76895e3e2eed926ebff2fc2291bec92d85224e"
   license "MIT"
   head "https://github.com/samwiseg0/iAirport.git", branch: "master"
 
@@ -19,7 +19,8 @@ class Iairport < Formula
     <<~EOS
       The first run asks for Location permission. Click Allow so iairport
       can read the SSID and BSSID. The grant is tied to the installed
-      binary, so each upgrade asks once more.
+      binary, so each upgrade asks once more. The first roam asks for
+      Notifications permission once, so the banner can carry the icon.
 
       Keep one install. If you built from source with `make install`
       before, run `sudo make uninstall` in that clone. If no prompt
