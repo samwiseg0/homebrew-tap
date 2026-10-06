@@ -1,8 +1,8 @@
 class Iairport < Formula
   desc "Wi-Fi roaming and link diagnostics for macOS"
   homepage "https://github.com/samwiseg0/iAirport"
-  url "https://github.com/samwiseg0/iAirport/archive/refs/tags/v2.1.2.tar.gz"
-  sha256 "14655bc6739449a525aa4b99b71a83732be5fcc86344935fc9fcb169720091f1"
+  url "https://github.com/samwiseg0/iAirport/archive/refs/tags/v2.2.0.tar.gz"
+  sha256 "8736de723d2ece4d04759b12be93f70ecb62ffe56d9388085b81478940c1243e"
   license "MIT"
   head "https://github.com/samwiseg0/iAirport.git", branch: "master"
 
@@ -21,6 +21,9 @@ class Iairport < Formula
       can read the SSID and BSSID. The grant is tied to the installed
       binary, so each upgrade asks once more. The first roam asks for
       Notifications permission once, so the banner can carry the icon.
+
+      Each run writes a transcript to ~/Library/Logs/iairport/. Use
+      --log-dir PATH to put it elsewhere, or --no-session-log to skip it.
 
       Keep one install. If you built from source with `make install`
       before, run `sudo make uninstall` in that clone. If no prompt
