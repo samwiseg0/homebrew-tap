@@ -1,8 +1,8 @@
 class Iairport < Formula
   desc "Wi-Fi roaming and link diagnostics for macOS"
   homepage "https://github.com/samwiseg0/iAirport"
-  url "https://github.com/samwiseg0/iAirport/archive/refs/tags/v2.3.2.tar.gz"
-  sha256 "dbddd9dc41919c4c6fc960e3f8547a596d3e55fd6915174f1fc90427ee1538ab"
+  url "https://github.com/samwiseg0/iAirport/archive/refs/tags/v2.4.0.tar.gz"
+  sha256 "4a49d808daac6d7572fe4dc5597737cd63aa00b57fa64dc6dcbd3e52a9f58823"
   license "MIT"
   head "https://github.com/samwiseg0/iAirport.git", branch: "master"
 
